@@ -18,7 +18,7 @@ export function Contacts({ lang }: ContactsProps) {
           </h2>
         </Reveal>
 
-        <Reveal delay={0.08} className="mt-5 w-full sm:mt-6">
+        <Reveal delay={0.08} className="mobile-shell mt-5 w-full sm:mt-6">
           <div className="w-full rounded-[20px] border border-[var(--border)] bg-[var(--card)] p-5 sm:rounded-[var(--radius-lg)] sm:p-8">
             <div className="text-xl font-semibold tracking-tight">
               {c.cardTitle[lang]}

@@ -71,7 +71,7 @@ export function Header({ lang, theme, onLangToggle, onThemeToggle }: HeaderProps
       <Container>
         <div
           className={[
-            "mx-auto flex h-14 w-full items-center sm:h-16",
+            "mobile-shell mx-auto flex h-14 w-full items-center sm:h-16",
             "rounded-full border border-[var(--border)]",
             "bg-[var(--glass-bg)] backdrop-blur-[24px]",
             "shadow-[var(--glass-shadow)]",

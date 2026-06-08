@@ -73,7 +73,7 @@ export function Hero({ lang }: HeroProps) {
 
           <div className="col-span-12 md:col-span-6 lg:col-span-5">
             <Reveal delay={0.08} className="h-full">
-              <div className="relative aspect-[4/5] w-full max-w-full overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--card)] md:min-h-[520px] md:rounded-[var(--radius-lg)]">
+              <div className="mobile-shell relative aspect-[4/5] w-full max-w-full overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--card)] md:min-h-[520px] md:rounded-[var(--radius-lg)]">
                 <div className="absolute inset-0 opacity-80">
                   <Image
                     src="/hero.jpg"
