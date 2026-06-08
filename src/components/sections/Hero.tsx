@@ -15,7 +15,7 @@ export function Hero({ lang }: HeroProps) {
   return (
     <section className="pt-24 sm:pt-32">
       <Container>
-        <div className="grid grid-cols-12 items-stretch gap-8 sm:gap-10 md:gap-12">
+        <div className="grid grid-cols-12 items-stretch gap-6 sm:gap-10 md:gap-12">
           <div className="col-span-12 min-w-0 md:col-span-6 lg:col-span-7">
             <Reveal>
               <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--text-2)] sm:text-xs sm:tracking-[0.2em]">
@@ -73,7 +73,7 @@ export function Hero({ lang }: HeroProps) {
 
           <div className="col-span-12 md:col-span-6 lg:col-span-5">
             <Reveal delay={0.08} className="h-full">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--card)] md:min-h-[520px] md:rounded-[var(--radius-lg)]">
+              <div className="relative aspect-[4/5] w-full max-w-full overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--card)] md:min-h-[520px] md:rounded-[var(--radius-lg)]">
                 <div className="absolute inset-0 opacity-80">
                   <Image
                     src="/hero.jpg"

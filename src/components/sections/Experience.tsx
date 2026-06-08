@@ -9,7 +9,7 @@ import { Reveal } from "@/components/ui/Reveal";
 type ExperienceProps = { lang: Lang };
 
 export function Experience({ lang }: ExperienceProps) {
-  const [open, setOpen] = useState<string>(EXPERIENCE[0]?.id ?? "");
+  const [open, setOpen] = useState<string>("");
 
   return (
     <section id="experience" className="scroll-mt-24 pt-14 sm:scroll-mt-28 sm:pt-20">
@@ -20,13 +20,13 @@ export function Experience({ lang }: ExperienceProps) {
           </h2>
         </Reveal>
 
-        <div className="mt-5 space-y-3 sm:mt-6">
+        <div className="mt-5 w-full space-y-3 sm:mt-6">
           {EXPERIENCE.map((item, idx) => {
             const isOpen = open === item.id;
 
             return (
-              <Reveal key={item.id} delay={0.04 * idx}>
-                <div className="rounded-[14px] border border-[var(--border)] bg-[var(--card)] sm:rounded-[var(--radius)]">
+              <Reveal key={item.id} delay={0.04 * idx} className="w-full">
+                <div className="w-full rounded-[14px] border border-[var(--border)] bg-[var(--card)] sm:rounded-[var(--radius)]">
                   <button
                     type="button"
                     onClick={() => setOpen(isOpen ? "" : item.id)}
