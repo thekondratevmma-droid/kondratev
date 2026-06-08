@@ -25,7 +25,7 @@ export function Experience({ lang }: ExperienceProps) {
             const isOpen = open === item.id;
 
             return (
-              <Reveal key={item.id} delay={0.04 * idx} className="mobile-shell w-full">
+              <Reveal key={item.id} delay={0.04 * idx} className="w-full">
                 <div className="w-full rounded-[14px] border border-[var(--border)] bg-[var(--card)] sm:rounded-[var(--radius)]">
                   <button
                     type="button"

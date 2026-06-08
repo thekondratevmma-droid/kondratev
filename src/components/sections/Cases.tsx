@@ -21,7 +21,7 @@ export function Cases({ lang }: CasesProps) {
         <div className="mt-5 grid w-full grid-cols-1 gap-5 sm:mt-6 sm:gap-6 md:grid-cols-2">
           {CASES.map((c, idx) => (
             <Reveal key={idx} delay={0.05 * idx} className="h-full w-full">
-              <TiltCard className="mobile-shell h-full w-full rounded-[var(--radius-lg)]">
+              <TiltCard className="h-full w-full rounded-[var(--radius-lg)]">
                 <article className="relative flex h-full min-h-[360px] flex-col overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--card)] sm:min-h-[420px] sm:rounded-[var(--radius-lg)]">
                   {c.comingSoon ? (
                     <div className="relative flex h-full min-h-[420px] items-stretch">
