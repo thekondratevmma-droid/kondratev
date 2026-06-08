@@ -93,6 +93,19 @@ html.theme-light ::selection {
   box-shadow: var(--glass-inset);
 }
 
+.mobile-frame {
+  width: 100%;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .mobile-frame {
+    max-width: none;
+  }
+}
+
 /* Turn off hero reflection in light theme (prevents “washed” photo) */
 html.theme-light .hero-reflection {
   display: none;
