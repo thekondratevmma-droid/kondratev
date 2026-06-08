@@ -67,20 +67,20 @@ export function Header({ lang, theme, onLangToggle, onThemeToggle }: HeaderProps
   const reduceMotion = useReducedMotion();
 
   return (
-    <header className="fixed top-4 left-1/2 z-[1000] w-full -translate-x-1/2">
+    <header className="fixed top-3 left-1/2 z-[1000] w-full -translate-x-1/2 sm:top-4">
       <Container>
         <div
           className={[
-            "mx-auto flex h-16 w-full items-center",
+            "mx-auto flex h-14 w-full items-center sm:h-16",
             "rounded-full border border-[var(--border)]",
             "bg-[var(--glass-bg)] backdrop-blur-[24px]",
             "shadow-[var(--glass-shadow)]",
             "inset-border",
-            "px-3 sm:px-4",
+            "px-2.5 sm:px-4",
           ].join(" ")}
         >
-          <div className="flex items-center gap-3">
-            <div className="relative h-9 w-9 overflow-hidden rounded-full border border-[var(--border)] bg-[var(--card)]">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="relative h-8 w-8 overflow-hidden rounded-full border border-[var(--border)] bg-[var(--card)] sm:h-9 sm:w-9">
               <Image
                 src="/avatar.jpg"
                 alt="Аватар"
@@ -90,7 +90,7 @@ export function Header({ lang, theme, onLangToggle, onThemeToggle }: HeaderProps
                 priority
               />
             </div>
-            <span className="text-sm font-semibold tracking-tight">
+            <span className="text-[13px] font-semibold tracking-tight sm:text-sm">
               <span className="sm:hidden">Андрей</span>
               <span className="hidden sm:inline">Андрей Кондратьев</span>
             </span>
@@ -119,7 +119,7 @@ export function Header({ lang, theme, onLangToggle, onThemeToggle }: HeaderProps
             </a>
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <button
               type="button"
               onClick={() => {

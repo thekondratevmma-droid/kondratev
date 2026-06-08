@@ -12,29 +12,29 @@ export function Experience({ lang }: ExperienceProps) {
   const [open, setOpen] = useState<string>(EXPERIENCE[0]?.id ?? "");
 
   return (
-    <section id="experience" className="scroll-mt-28 pt-16 sm:pt-20">
+    <section id="experience" className="scroll-mt-24 pt-14 sm:scroll-mt-28 sm:pt-20">
       <Container>
         <Reveal>
-          <h2 className="text-3xl font-black uppercase tracking-[-0.02em] sm:text-4xl">
+          <h2 className="text-[28px] font-black uppercase tracking-[-0.02em] sm:text-4xl">
             {COPY.sections.experience[lang]}
           </h2>
         </Reveal>
 
-        <div className="mt-6 space-y-3">
+        <div className="mt-5 space-y-3 sm:mt-6">
           {EXPERIENCE.map((item, idx) => {
             const isOpen = open === item.id;
 
             return (
               <Reveal key={item.id} delay={0.04 * idx}>
-                <div className="rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)]">
+                <div className="rounded-[14px] border border-[var(--border)] bg-[var(--card)] sm:rounded-[var(--radius)]">
                   <button
                     type="button"
                     onClick={() => setOpen(isOpen ? "" : item.id)}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                    className="flex w-full items-start justify-between gap-4 px-4 py-4 text-left sm:items-center sm:px-5"
                     aria-expanded={isOpen}
                   >
-                    <div>
-                      <div className="text-sm font-semibold tracking-tight">
+                    <div className="min-w-0 pr-1">
+                      <div className="text-[15px] font-semibold leading-5 tracking-tight sm:text-sm sm:leading-normal">
                         {item.company} — {item.role}
                       </div>
                       <div className="mt-1 text-xs text-[var(--text-2)]">
@@ -106,7 +106,7 @@ export function Experience({ lang }: ExperienceProps) {
                         }}
                         className="overflow-hidden"
                       >
-                        <div className="px-5 pb-5">
+                        <div className="px-4 pb-4 sm:px-5 sm:pb-5">
                           <ul className="space-y-2 text-sm leading-6 text-[var(--text-2)]">
                             {item.bullets[lang].map((b) => (
                               <li key={b} className="flex gap-3">

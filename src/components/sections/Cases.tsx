@@ -10,19 +10,19 @@ type CasesProps = { lang: Lang };
 
 export function Cases({ lang }: CasesProps) {
   return (
-    <section id="cases" className="scroll-mt-28 pt-16 sm:pt-20">
+    <section id="cases" className="scroll-mt-24 pt-14 sm:scroll-mt-28 sm:pt-20">
       <Container>
         <Reveal>
-          <h2 className="text-3xl font-black uppercase tracking-[-0.02em] sm:text-4xl">
+          <h2 className="text-[28px] font-black uppercase tracking-[-0.02em] sm:text-4xl">
             {COPY.sections.cases[lang]}
           </h2>
         </Reveal>
 
-        <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-5 grid grid-cols-1 gap-5 sm:mt-6 sm:gap-6 md:grid-cols-2">
           {CASES.map((c, idx) => (
             <Reveal key={idx} delay={0.05 * idx} className="h-full">
               <TiltCard className="h-full rounded-[var(--radius-lg)]">
-                <article className="relative flex h-full min-h-[420px] flex-col overflow-hidden rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--card)]">
+                <article className="relative flex h-full min-h-[360px] flex-col overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--card)] sm:min-h-[420px] sm:rounded-[var(--radius-lg)]">
                   {c.comingSoon ? (
                     <div className="relative flex h-full min-h-[420px] items-stretch">
                       {/* blurred background for entire card */}
@@ -36,7 +36,7 @@ export function Cases({ lang }: CasesProps) {
                       />
                       <div className="absolute inset-0 bg-black/40" />
 
-                      <div className="relative z-10 grid w-full place-items-center p-6">
+                      <div className="relative z-10 grid w-full place-items-center p-5 sm:p-6">
                         <div className="flex flex-col items-center gap-3">
                           <span className="grid h-14 w-14 place-items-center rounded-full border border-[var(--border)] bg-black/25 backdrop-blur-md">
                             <svg
@@ -80,7 +80,7 @@ export function Cases({ lang }: CasesProps) {
                         />
                       </div>
 
-                      <div className="flex flex-1 flex-col px-5 pb-5 pt-4">
+                      <div className="flex flex-1 flex-col px-4 pb-4 pt-4 sm:px-5 sm:pb-5">
                         <h3 className="text-lg font-semibold leading-6 tracking-tight">
                           {c.title[lang]}
                         </h3>
