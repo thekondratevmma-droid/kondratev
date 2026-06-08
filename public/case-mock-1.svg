@@ -1,0 +1,39 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="120" y1="80" x2="1500" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B1B1B"/>
+      <stop offset="1" stop-color="#0B0B0B"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(520 280) rotate(140) scale(900 520)">
+      <stop stop-color="rgba(255,255,255,0.10)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="
+        0 0 0 0 0
+        0 0 0 0 0
+        0 0 0 0 0
+        0 0 0 .12 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" rx="48" fill="url(#g)"/>
+  <rect width="1600" height="900" rx="48" fill="url(#spot)"/>
+  <rect width="1600" height="900" rx="48" filter="url(#noise)"/>
+
+  <!-- Minimal “3D navigation” mock -->
+  <g opacity="0.9">
+    <path d="M360 610l380-250 520 160-380 250-520-160Z" fill="rgba(255,255,255,0.08)"/>
+    <path d="M420 580l320-210 440 134-320 210-440-134Z" fill="rgba(255,255,255,0.06)"/>
+    <path d="M510 548l230-152 320 98-230 152-320-98Z" fill="rgba(255,255,255,0.10)"/>
+    <path d="M740 358v300" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+    <path d="M1180 492v280" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+    <circle cx="740" cy="358" r="8" fill="rgba(255,255,255,0.35)"/>
+    <circle cx="1180" cy="492" r="7" fill="rgba(255,255,255,0.26)"/>
+  </g>
+
+  <text x="72" y="120" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="22" font-weight="700" fill="rgba(255,255,255,0.75)" letter-spacing="0.12em">
+    CASE PREVIEW
+  </text>
+</svg>
