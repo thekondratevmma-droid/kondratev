@@ -35,16 +35,8 @@ function MailIcon() {
       aria-hidden
     >
       <path
-        d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z"
-        stroke="currentColor"
-        strokeWidth="1"
-      />
-      <path
-        d="M5.5 7.5 12 12l6.5-4.5"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Zm1.7.2L12 11.8l6.3-4.1c-.2-.4-.6-.7-1.1-.7h-10c-.5 0-.9.3-1.1.7Z"
+        fill="currentColor"
       />
     </svg>
   );

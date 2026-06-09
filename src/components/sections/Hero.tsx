@@ -9,6 +9,34 @@ type HeroProps = {
   lang: Lang;
 };
 
+function CtaArrowIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+      className="rotate-[-45deg]"
+    >
+      <path
+        d="M5 12h12"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M13 6l6 6-6 6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function Hero({ lang }: HeroProps) {
   const hero = COPY.hero;
 
@@ -54,7 +82,9 @@ export function Hero({ lang }: HeroProps) {
                   ].join(" ")}
                 >
                   <span>{hero.primaryCta[lang]}</span>
-                  <span className="ml-3 text-lg leading-none">↗</span>
+                  <span className="ml-3 inline-flex">
+                    <CtaArrowIcon />
+                  </span>
                 </a>
                 <a
                   href="#experience"
@@ -122,25 +152,28 @@ export function Hero({ lang }: HeroProps) {
               </Reveal>
 
               <Reveal delay={0.15} className="mt-6">
-                <div className="flex flex-wrap items-center gap-3">
+                <div className="flex items-center gap-3">
                   <a
                     href="https://t.me/Mysterious_Nomad"
                     target="_blank"
                     rel="noreferrer"
                     className={[
-                      "inline-flex h-11 items-center justify-center rounded-full px-5",
+                      "inline-flex h-11 shrink-0 items-center justify-center rounded-full px-5 whitespace-nowrap",
                       "border border-transparent bg-[var(--btn-solid-bg)] text-[var(--btn-solid-fg)]",
                       "text-sm font-semibold",
                       "transition-colors",
                       "hover:border-[var(--btn-solid-hover-border)] hover:bg-transparent hover:text-[var(--btn-solid-hover-fg)]",
                     ].join(" ")}
                   >
-                    {hero.primaryCta[lang]}
+                    <span>{hero.primaryCta[lang]}</span>
+                    <span className="ml-3 inline-flex">
+                      <CtaArrowIcon />
+                    </span>
                   </a>
                   <a
                     href="#experience"
                     className={[
-                      "inline-flex h-11 items-center justify-center rounded-full px-5",
+                      "inline-flex h-11 shrink-0 items-center justify-center rounded-full px-5 whitespace-nowrap",
                       "border border-[var(--btn-outline-border)] bg-transparent text-[var(--btn-outline-fg)]",
                       "text-sm font-semibold",
                       "transition-colors",
