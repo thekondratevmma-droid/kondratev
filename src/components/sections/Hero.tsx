@@ -18,7 +18,7 @@ function CtaArrowIcon() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden
-      className="rotate-[-45deg]"
+      className="rotate-[-45deg] transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:rotate-0"
     >
       <path
         d="M5 12h12"
@@ -74,7 +74,7 @@ export function Hero({ lang }: HeroProps) {
                   target="_blank"
                   rel="noreferrer"
                   className={[
-                    "inline-flex h-[58px] w-full items-center justify-center rounded-full px-6",
+                    "group inline-flex h-[58px] w-full items-center justify-center rounded-full px-6",
                     "border border-transparent bg-[var(--btn-solid-bg)] text-[var(--btn-solid-fg)]",
                     "text-[15px] font-medium",
                     "transition-colors",
@@ -158,7 +158,7 @@ export function Hero({ lang }: HeroProps) {
                     target="_blank"
                     rel="noreferrer"
                     className={[
-                      "inline-flex h-11 shrink-0 items-center justify-center rounded-full px-5 whitespace-nowrap",
+                      "group inline-flex h-11 shrink-0 items-center justify-center rounded-full px-5 whitespace-nowrap",
                       "border border-transparent bg-[var(--btn-solid-bg)] text-[var(--btn-solid-fg)]",
                       "text-sm font-semibold",
                       "transition-colors",
